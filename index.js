@@ -23,3 +23,24 @@ const paragraph = "I love teaching. If you do not love teaching what else can yo
 
 console.log(countWords(paragraph, "love", "you"));
 
+
+
+// 1.b
+
+function cleanText(sentence) {
+    let cleanText = '';
+    // return (sentence.replace(/[^a-zA-Z0-9 :]/g, ''))
+    for (let i = 0; i < sentence.length; i++) {
+        let char = sentence.charAt(i);
+        if (char != "%" && char != "$" && char != "@" && char != "&" && char != "#" && char != ";" && char != "!") {
+            cleanText += char;
+        }
+    }
+    return cleanText;
+}
+
+
+const sentence = `%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?`;
+
+console.log(cleanText(sentence));
+
