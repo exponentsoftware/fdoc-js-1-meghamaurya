@@ -63,3 +63,20 @@ const sentence2 = `I am a teacher and I love teaching. There is nothing as more 
 
 console.log(countWords2(sentence2));
 
+
+
+//1.d
+
+function varietyOfWords(sentence2) {
+    let totalWords = 0, unique = [];
+    let splitSentence3 = sentence2.split(" ");
+    for (let i = 0; i < splitSentence3.length; i++) {
+        if (unique.indexOf(splitSentence3[i]) === -1) {
+            unique.push(splitSentence3[i]);
+            totalWords++;
+        }
+    }
+    return totalWords;
+}
+
+console.log(varietyOfWords(sentence2));
