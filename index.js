@@ -44,3 +44,22 @@ const sentence = `%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is 
 
 console.log(cleanText(sentence));
 
+
+
+// 1.c
+
+function countWords2(sentence2) {
+    let totalWord = 0;
+    let splitSentence = sentence2.split(" ");
+    for (let i = 0; i < splitSentence.length; i++) {
+        if (splitSentence[i].length > 1) {
+            totalWord++;
+        }
+    }
+    return totalWord;
+}
+
+const sentence2 = `I am a teacher and I love teaching. There is nothing as more rewarding as educating and empowering people. I found teaching more interesting than any other jobs. Does this motivate you to be a teacher?`
+
+console.log(countWords2(sentence2));
+
