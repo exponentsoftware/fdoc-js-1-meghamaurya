@@ -93,4 +93,59 @@ for (let i = 1; i <= n; i++) {
     }
     str += '\n';
 }
-console.log(str)
+console.log(str);
+
+
+//2.b
+
+function sevenRandomNumbers() {
+    let randomNumber = new Set();
+    while (randomNumber.size !== 7) {
+        randomNumber.add(Math.floor(Math.random() * 10) + 0);
+    }
+    return [...randomNumber]
+}
+console.log(sevenRandomNumbers());
+
+
+// 2.c
+
+function reverseArray(arr) {
+    let newArr = [];
+    while (arr.length) {
+        newArr.push(arr.pop());
+    }
+    return newArr;
+}
+
+const arr = ["A", "B", "C"];
+console.log(reverseArray(arr));
+
+
+// 2.d
+
+function checkUniqueness(arr) {
+    let isUnique = true;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            if (i !== j) {
+                if (arr[i] === arr[j]) {
+                    isUnique = false;
+                    break;
+                }
+            }
+            if (isUnique) break;
+        }
+    }
+    if (isUnique) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+const arrOne = [1, 4, 6, 2, 1];
+console.log(checkUniqueness(arrOne));
+
+const arrTwo = [1, 4, 6, 2, 3]
+console.log(checkUniqueness(arrTwo));
